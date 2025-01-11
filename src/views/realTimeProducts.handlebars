@@ -1,0 +1,45 @@
+<h1>INFORMACION DESDE EL SERVIDOR</h1>
+<div class="realtimeproducts">
+    <h2>PRODUCTOS EN TIEMPO REAL</h2>
+    <div class="products-container-rtp"></div>
+</div>
+<div class="events">
+    <div class="add">
+        <h2>Agregar Producto</h2>
+        <div class="formulario-add">
+            <input id="alta-nombre" type="text" placeholder="Nombre Producto">
+            <input id="alta-descripcion" type="text" placeholder="Descripcion Producto">
+            <input id="alta-codigo" type="text" placeholder="Codigo Producto">
+            <input id="alta-colorprod" type="text" placeholder="Color Producto">
+            <input id="alta-talle" type="text" placeholder="Talle Producto">
+            <input id="alta-precio" type="number" placeholder="Precio Producto">
+            <input id="alta-stock" type="number" placeholder="Stock">
+            <input id="alta-categoria" type="text" placeholder="Categoria">
+            <button id="button-add">Agregar Nuevo Producto</button>
+        </div>
+    </div>
+    <div class="update">
+        <h2>Modificar Producto</h2>
+        <div class="formulario-update">
+            <input id="modificar-id" type="text" placeholder="ID Producto a Modificar">
+            <input id="modificar-nombre" type="text" placeholder="Nombre Producto">
+            <input id="modificar-descripcion" type="text" placeholder="Descripcion Producto">
+            <input id="modificar-codigo" type="text" placeholder="Codigo Producto">
+            <input id="modificar-colorprod" type="text" placeholder="Color Producto">
+            <input id="modificar-talle" type="text" placeholder="Talle Producto">
+            <input id="modificar-precio" type="number" placeholder="Precio Producto">
+            <input id="modificar-stock" type="number" placeholder="Stock">
+            <input id="modificar-categoria" type="text" placeholder="Categoria">
+            <button id="button-update" onclick="updateProduct()">Modificar Producto</button>
+        </div>
+    </div>
+    <div class="delete">
+        <h2>Eliminar Producto</h2>
+        <div class="formulario-delete">
+            <input id="delete-id" type="text" placeholder="ID Producto a Eliminar">
+            <button id="button-delete" onclick="deleteProduct()">Eliminar Producto</button>
+        </div>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./realtimeproducts.js"></script>
